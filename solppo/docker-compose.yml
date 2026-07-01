@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: solppo-web
+    container_name: solppo-web
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./solppo-data:/app/data
